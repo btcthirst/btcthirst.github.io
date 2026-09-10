@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signal — CV</title>
+    <style>
+        :root {
+            --bg: #0A0F14;
+            --surface: #101820;
+            --line: #1E2A33;
+            --text: #E6EDF2;
+            --muted: #6C8494;
+            --accent: #4FD1C5;
+            --warm: #E0A458;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .hero {
+            position: relative;
+            padding: 100px 24px 60px;
+            overflow: hidden;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .hero svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 220px;
+            opacity: 0.35;
+        }
+
+        .hero-inner {
+            position: relative;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .hero .kicker {
+            font-size: 13px;
+            color: var(--accent);
+            font-variant-numeric: tabular-nums;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 600;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+        }
+
+        .hero .role {
+            font-size: 18px;
+            color: var(--muted);
+            margin-bottom: 32px;
+        }
+
+        .stats {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat .n {
+            font-size: 24px;
+            font-weight: 600;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat .l {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .wrap {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 64px 24px;
+        }
+
+        section {
+            margin-bottom: 64px;
+        }
+
+        section h2 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--muted);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .bio {
+            font-size: 17px;
+            max-width: 60ch;
+            color: var(--text);
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 28px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 6px;
+            bottom: 6px;
+            width: 1px;
+            background: var(--line);
+        }
+
+        .point {
+            position: relative;
+            margin-bottom: 32px;
+        }
+
+        .point::before {
+            content: "";
+            position: absolute;
+            left: -28px;
+            top: 6px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 0 4px rgba(79, 209, 197, 0.12);
+        }
+
+        .point .when {
+            font-size: 12px;
+            color: var(--muted);
+            font-variant-numeric: tabular-nums;
+            margin-bottom: 6px;
+        }
+
+        .point h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .point p {
+            font-size: 15px;
+            color: var(--muted);
+            max-width: 52ch;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+        }
+
+        .chip {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: 16px;
+            font-size: 14px;
+        }
+
+        .chip .cat {
+            font-size: 11px;
+            color: var(--accent);
+            margin-bottom: 8px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 24px;
+            border-top: 1px solid var(--line);
+            font-size: 14px;
+            color: var(--muted);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .contact a {
+            color: var(--text);
+            text-decoration: none;
+            border-bottom: 1px solid var(--warm);
+        }
+
+        @media (max-width:600px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .stats {
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <svg viewBox="0 0 800 220" preserveAspectRatio="none">
+            <polyline
+                points="0,180 60,170 120,150 180,160 240,110 300,130 360,80 420,95 480,60 540,75 600,40 660,55 720,20 800,35"
+                fill="none" stroke="#4FD1C5" stroke-width="2" />
+        </svg>
+        <div class="hero-inner">
+            <div class="kicker">DEV · Maksym Slobodianyk · online</div>
+            <h1>Maksym Slobodianyk</h1>
+            <div class="role">Frontend / Web3 розробник — React, Next.js, Solana / Anchor</div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="n">5</div>
+                    <div class="l">років у розробці</div>
+                </div>
+                <div class="stat">
+                    <div class="n">2</div>
+                    <div class="l">Solana bootcamp (#2, #3)</div>
+                </div>
+                <div class="stat">
+                    <div class="n">Kherson</div>
+                    <div class="l">Україна</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrap">
+
+        <section>
+            <h2>Про мене</h2>
+            <p class="bio">Frontend та Web3-орієнтований інженер: створюю сучасні інтерфейси для блокчейн- та
+                кіберспортивних продуктів. Останнім часом фокусуюсь на розробці під Solana (Anchor). Пройшов Solana
+                Bootcamp Ukraine #2 та #3, а також Solana Startup Terminal. Зараз розробляю
+                турнірну/esports-інфраструктуру — UI-системи, wallet-інтеграції, масштабовану frontend-архітектуру.</p>
+        </section>
+
+        <section>
+            <h2>Досвід</h2>
+            <div class="timeline">
+                <div class="point">
+                    <div class="when">2023 — нині</div>
+                    <h3>Web Developer · Freelance</h3>
+                    <p>Розробка Web3 та кіберспортивних продуктів: frontend-архітектура, wallet-інтеграції, UI-системи.
+                    </p>
+                </div>
+                <div class="point">
+                    <div class="when">2022 — 2023</div>
+                    <h3>Front End Developer (trainee) · Freelance</h3>
+                    <p>Перші комерційні проєкти на React/JavaScript.</p>
+                </div>
+                <div class="point">
+                    <div class="when">2021 — 2022</div>
+                    <h3>Angular Developer · Cbsystematics Development</h3>
+                    <p>Розробка на Angular, Херсон.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Стек</h2>
+            <div class="grid">
+                <div class="chip">
+                    <div class="cat">frontend</div>React, Next.js, TypeScript, TailwindCSS
+                </div>
+                <div class="chip">
+                    <div class="cat">backend</div>NestJS, Go, PostgreSQL
+                </div>
+                <div class="chip">
+                    <div class="cat">blockchain</div>Rust, Anchor, Solana
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Проєкти</h2>
+            <div class="timeline">
+                <div class="point">
+                    <div class="when">github ↗</div>
+                    <h3>solana-training</h3>
+                    <p>Практика розробки на Solana, TypeScript.</p>
+                </div>
+                <div class="point">
+                    <div class="when">github ↗</div>
+                    <h3>solana-ua-bootcamp-2024-08-06</h3>
+                    <p>Anchor/Rust програми, написані під час буткемпу.</p>
+                </div>
+                <div class="point">
+                    <div class="when">github ↗</div>
+                    <h3>my-site</h3>
+                    <p>Портфоліо-сайт.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Освіта</h2>
+            <div class="timeline">
+                <div class="point">
+                    <div class="when">2001 — 2004</div>
+                    <h3>Переяслав-Хмельницький державний педагогічний університет ім. Г. С. Сковороди</h3>
+                    <p>Бакалавр, трудове навчання / інформатика.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="contact">
+            <span>btcthirst.github.io</span>
+            <span><a href="mailto:btcthirst@gmail.com">btcthirst@gmail.com</a> · <a
+                    href="https://www.linkedin.com/in/maksymslobodianyk-007210215">linkedin</a> · <a
+                    href="#">github</a></span>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
