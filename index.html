@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signal — CV</title>
+    <title>Maksym Slobodianyk — Frontend & Web3 Engineer</title>
+    <meta name="description"
+        content="Frontend & Web3 engineer building Solana dApps with React, Next.js, TypeScript, @solana/kit and Privy. Projects, experience and contacts.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Maksym Slobodianyk — Frontend & Web3 Engineer">
+    <meta property="og:description"
+        content="React, Next.js, TypeScript and Solana. BracketChain, Solana Escrow Frontend, Universal Indexer.">
+    <meta property="og:url" content="https://btcthirst.github.io">
+    <meta name="theme-color" content="#0A0F14">
     <style>
         :root {
             --bg: #0A0F14;
@@ -27,6 +35,10 @@
             color: var(--text);
             font-family: 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.5;
+        }
+
+        a {
+            color: inherit;
         }
 
         .hero {
@@ -153,6 +165,16 @@
             margin-bottom: 6px;
         }
 
+        .point .when a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 12px;
+        }
+
+        .point .when a:hover {
+            text-decoration: underline;
+        }
+
         .point h3 {
             font-size: 18px;
             font-weight: 600;
@@ -162,12 +184,19 @@
         .point p {
             font-size: 15px;
             color: var(--muted);
-            max-width: 52ch;
+            max-width: 56ch;
+        }
+
+        .point .tech {
+            margin-top: 8px;
+            font-size: 13px;
+            color: var(--text);
+            opacity: 0.75;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
             gap: 16px;
         }
 
@@ -203,7 +232,16 @@
             border-bottom: 1px solid var(--warm);
         }
 
+        a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
         @media (max-width:600px) {
+            .hero {
+                padding-top: 72px;
+            }
+
             .hero h1 {
                 font-size: 36px;
             }
@@ -218,27 +256,27 @@
 <body>
 
     <div class="hero">
-        <svg viewBox="0 0 800 220" preserveAspectRatio="none">
+        <svg viewBox="0 0 800 220" preserveAspectRatio="none" aria-hidden="true">
             <polyline
                 points="0,180 60,170 120,150 180,160 240,110 300,130 360,80 420,95 480,60 540,75 600,40 660,55 720,20 800,35"
                 fill="none" stroke="#4FD1C5" stroke-width="2" />
         </svg>
         <div class="hero-inner">
-            <div class="kicker">DEV · Maksym Slobodianyk · online</div>
+            <div class="kicker">DEV · Kherson, Ukraine</div>
             <h1>Maksym Slobodianyk</h1>
-            <div class="role">Frontend / Web3 розробник — React, Next.js, Solana / Anchor</div>
+            <div class="role">Frontend &amp; Web3 Engineer — React, Next.js, TypeScript, Solana</div>
             <div class="stats">
                 <div class="stat">
                     <div class="n">5</div>
-                    <div class="l">років у розробці</div>
+                    <div class="l">years in frontend</div>
                 </div>
                 <div class="stat">
-                    <div class="n">2</div>
-                    <div class="l">Solana bootcamp (#2, #3)</div>
+                    <div class="n">3</div>
+                    <div class="l">Solana programs (SBU #2, #3, SST)</div>
                 </div>
                 <div class="stat">
-                    <div class="n">Kherson</div>
-                    <div class="l">Україна</div>
+                    <div class="n">4</div>
+                    <div class="l">Solana projects with public code</div>
                 </div>
             </div>
         </div>
@@ -247,87 +285,136 @@
     <div class="wrap">
 
         <section>
-            <h2>Про мене</h2>
-            <p class="bio">Frontend та Web3-орієнтований інженер: створюю сучасні інтерфейси для блокчейн- та
-                кіберспортивних продуктів. Останнім часом фокусуюсь на розробці під Solana (Anchor). Пройшов Solana
-                Bootcamp Ukraine #2 та #3, а також Solana Startup Terminal. Зараз розробляю
-                турнірну/esports-інфраструктуру — UI-системи, wallet-інтеграції, масштабовану frontend-архітектуру.</p>
+            <h2>About</h2>
+            <p class="bio">Frontend engineer with 5 years of professional experience (Angular, then React, Next.js and
+                TypeScript), now focused on Solana and Web3. I build wallet-connected interfaces with
+                <code>@solana/kit</code>, Codama-generated clients, Wallet Standard and Privy, and I have also built an
+                IDL-driven Anchor indexer in TypeScript and PostgreSQL. Completed Solana Bootcamp Ukraine #2 and #3 and
+                the Solana Startup Terminal. Interested in Web3 UX, high-performance frontends and realtime apps.</p>
         </section>
 
         <section>
-            <h2>Досвід</h2>
+            <h2>Projects</h2>
             <div class="timeline">
                 <div class="point">
-                    <div class="when">2023 — нині</div>
-                    <h3>Web Developer · Freelance</h3>
-                    <p>Розробка Web3 та кіберспортивних продуктів: frontend-архітектура, wallet-інтеграції, UI-системи.
+                    <div class="when">
+                        <a href="https://bracket-chain-frontend.vercel.app">live ↗</a>
+                        <a href="https://github.com/btcthirst/BracketChain-Frontend">code ↗</a>
+                    </div>
+                    <h3>BracketChain</h3>
+                    <p>Frontend for an on-chain tournament protocol on Solana: escrowed USDC prize pools, players join by
+                        signing transactions, results settle on-chain. Every write is a real signed devnet transaction
+                        through the protocol's TypeScript SDK. Privy (email, social, embedded and external wallets) is
+                        bridged to a <code>@solana/kit</code> signer; brackets update live over WebSocket subscriptions.
                     </p>
+                    <div class="tech">Next.js 16 · TypeScript · Tailwind v4 · shadcn/ui · Motion · Privy · Jest</div>
+                </div>
+                <div class="point">
+                    <div class="when">
+                        <a href="https://solana-startterm-app.vercel.app">live ↗</a>
+                        <a href="https://github.com/btcthirst/solana-startterm-app">code ↗</a>
+                    </div>
+                    <h3>Solana Escrow Frontend</h3>
+                    <p>dApp for an SPL-token escrow program on devnet: make an offer, browse open offers, complete the
+                        atomic swap. Built on <code>@solana/kit</code> without web3.js, Codama-generated instructions, a
+                        custom Wallet Standard modal tested with Phantom, Backpack and Solflare, Helius DAS for token
+                        metadata. Built for Solana Startup Terminal.</p>
+                    <div class="tech">Vite · React 19 · TypeScript · @solana/kit · Codama · Tailwind v4</div>
+                </div>
+                <div class="point">
+                    <div class="when">
+                        <a href="https://github.com/btcthirst/solana-universal-indexer">code ↗</a>
+                    </div>
+                    <h3>Solana Universal Indexer</h3>
+                    <p>IDL-driven indexer for any Anchor program: it generates the PostgreSQL schema, decodes
+                        transactions and serves a REST API. Realtime and batch modes, cursor-based backfill on restart,
+                        RPC retry with backoff, Docker Compose setup.</p>
+                    <div class="tech">TypeScript · Fastify · PostgreSQL · Docker · Vitest</div>
+                </div>
+                <div class="point">
+                    <div class="when">
+                        <a href="https://github.com/btcthirst/solana-airdrop-tool">code ↗</a>
+                    </div>
+                    <h3>Solana Airdrop Tool</h3>
+                    <p>Web app to create SPL tokens with Metaplex metadata, mint them and send batch airdrops with
+                        transaction batching and live progress.</p>
+                    <div class="tech">Next.js · TypeScript · web3.js · wallet-adapter · Tailwind</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="point">
+                    <div class="when">2023 — now</div>
+                    <h3>Web3 / Frontend Developer · Freelance</h3>
+                    <p>Build and ship Web3 and esports frontends in React, Next.js and TypeScript. Own wallet and auth UX
+                        for Solana dApps, build UI systems for tournament infrastructure, and work on the backend and
+                        on-chain side with Go, PostgreSQL, Rust and Anchor.</p>
                 </div>
                 <div class="point">
                     <div class="when">2022 — 2023</div>
-                    <h3>Front End Developer (trainee) · Freelance</h3>
-                    <p>Перші комерційні проєкти на React/JavaScript.</p>
+                    <h3>Frontend Developer (trainee) · Freelance</h3>
+                    <p>First commercial projects in Angular and TypeScript: responsive interfaces from design mockups,
+                        REST API integration, basic state-management patterns.</p>
                 </div>
                 <div class="point">
                     <div class="when">2021 — 2022</div>
                     <h3>Angular Developer · Cbsystematics Development</h3>
-                    <p>Розробка на Angular, Херсон.</p>
+                    <p>Component development in Angular as part of a team in Kherson, working with the backend team on
+                        API integration.</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Стек</h2>
+            <h2>Stack</h2>
             <div class="grid">
                 <div class="chip">
-                    <div class="cat">frontend</div>React, Next.js, TypeScript, TailwindCSS
+                    <div class="cat">frontend</div>TypeScript, React, Next.js, Tailwind CSS, shadcn/ui, Angular
                 </div>
                 <div class="chip">
-                    <div class="cat">backend</div>NestJS, Go, PostgreSQL
+                    <div class="cat">solana</div>@solana/kit, web3.js, Codama, Anchor, Wallet Standard, Privy, Helius
                 </div>
                 <div class="chip">
-                    <div class="cat">blockchain</div>Rust, Anchor, Solana
+                    <div class="cat">backend</div>Node.js (Fastify), Go, Rust, PostgreSQL
+                </div>
+                <div class="chip">
+                    <div class="cat">tools</div>Git, CI/CD, Docker, Jest, Vitest, Postman, Vercel
                 </div>
             </div>
         </section>
 
         <section>
-            <h2>Проєкти</h2>
+            <h2>Education &amp; training</h2>
             <div class="timeline">
                 <div class="point">
-                    <div class="when">github ↗</div>
-                    <h3>solana-training</h3>
-                    <p>Практика розробки на Solana, TypeScript.</p>
+                    <div class="when">2026</div>
+                    <h3>Solana Startup Terminal</h3>
+                    <p>Superteam Ukraine.</p>
                 </div>
                 <div class="point">
-                    <div class="when">github ↗</div>
-                    <h3>solana-ua-bootcamp-2024-08-06</h3>
-                    <p>Anchor/Rust програми, написані під час буткемпу.</p>
+                    <div class="when">2025</div>
+                    <h3>Solana Bootcamp Ukraine #3</h3>
                 </div>
                 <div class="point">
-                    <div class="when">github ↗</div>
-                    <h3>my-site</h3>
-                    <p>Портфоліо-сайт.</p>
+                    <div class="when">2024</div>
+                    <h3>Solana Bootcamp Ukraine #2</h3>
                 </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Освіта</h2>
-            <div class="timeline">
                 <div class="point">
                     <div class="when">2001 — 2004</div>
-                    <h3>Переяслав-Хмельницький державний педагогічний університет ім. Г. С. Сковороди</h3>
-                    <p>Бакалавр, трудове навчання / інформатика.</p>
+                    <h3>Pereiaslav-Khmelnytskyi Hryhorii Skovoroda State Pedagogical University</h3>
+                    <p>B.Sc., Vocational Education / Informatics.</p>
                 </div>
             </div>
         </section>
 
         <div class="contact">
-            <span>btcthirst.github.io</span>
+            <span>Kherson, Ukraine</span>
             <span><a href="mailto:btcthirst@gmail.com">btcthirst@gmail.com</a> · <a
                     href="https://www.linkedin.com/in/maksymslobodianyk-007210215">linkedin</a> · <a
-                    href="#">github</a></span>
+                    href="https://github.com/btcthirst">github</a></span>
         </div>
 
     </div>
