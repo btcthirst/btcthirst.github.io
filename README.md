@@ -14,4 +14,4 @@ Served by GitHub Pages from the `main` branch. Push a change and the site update
 
 ## Contact
 
-[GitHub](https://github.com/btcthirst) · [LinkedIn](https://www.linkedin.com/in/maksymslobodianyk-007210215) · btcthirst@gmail.com
+[GitHub](https://github.com/btcthirst) · [LinkedIn](https://www.linkedin.com/in/maksym-slobodianyk-007210215) · btcthirst@gmail.com
